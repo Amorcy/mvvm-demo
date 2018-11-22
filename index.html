@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>MVVM</title>
+</head>
+<body>
+  <div id='app'>
+    <input type="text" v-model='name1'>
+    <h5>{{name1}}</h5>
+    <input type="text" v-model='age'>
+    <h5 v-bind='age'></h5>
+  </div>
+  <script src="./lib/mvvm.js"></script>
+  <script>
+    window.onload = function() {
+      var app = new MVVM({
+        el: '#app',
+        data: {
+          name1: 'amorcy',
+          age: 23,
+        }
+      })
+    }
+  
+  </script>
+</body>
+</html>
